@@ -6,3 +6,8 @@ services:
     build:
       context: .
       dockerfile: FirstRazorWebApp/Dockerfile
+  nginxRP:
+    image: ${DOCKER_REGISTRY-}nginxRP
+    build:
+        context: .
+        dockerfile: nginx/Dockerfile
